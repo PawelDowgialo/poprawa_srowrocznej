@@ -25,14 +25,14 @@
         </Grid.RowDefinitions>
         
         <Button x:Name="PreviousButton" Grid.Column="0" Grid.Row="0" Click="PreviousButton_OnClick">
-            <Image Height="70" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz3.png"/>
+            <Image Height="70" x:Name="PreviousPhoto"/>
         </Button>
         
         <Button x:Name="NextButton" Grid.Column="3" Grid.Row="0" Click="NextButton_OnClick">
-            <Image Height="70" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz2.png"/>
+            <Image Height="70" x:Name="NextPhoto"/>
         </Button>
         
-        <Image Grid.Column="1" Grid.Row="0" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz.png" 
+        <Image Grid.Column="1" Grid.Row="0" x:Name="PhotoCircle"
                HorizontalAlignment="Left"
                Margin="30, 0, 0, 0"/>
         <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center" Margin="30, 0, 0, 0">

@@ -3,6 +3,8 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 
 namespace aplikacjamuzyczna;
 
@@ -28,7 +30,6 @@ public partial class MainWindow : Window
         SongsNumberTextBlock.Text = allTextLines[2 + (pageIndex * 6)];
         YearTextBlock.Text = allTextLines[3 + (pageIndex * 6)];
         
-        
     }
 
     private void NextButton_OnClick(object? sender, RoutedEventArgs e)
@@ -49,6 +50,16 @@ public partial class MainWindow : Window
 
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
+        
+        var bitmap = new Bitmap(AssetLoader.Open(new Uri("avares://aplikacjamuzyczna/images/obraz3.png")));
+        PreviousPhoto.Source = bitmap;
+        
+        var bitmap2 = new Bitmap(AssetLoader.Open(new Uri("avares://aplikacjamuzyczna/images/obraz2.png")));
+        NextPhoto.Source = bitmap2;
+        
+        var bitmap3 = new Bitmap(AssetLoader.Open(new Uri("avares://aplikacjamuzyczna/images/obraz.png")));
+        PhotoCircle.Source = bitmap3;
+        
         var dataPath = Path.Combine(Environment.CurrentDirectory, "assets/Data.txt");
         
         var allTextLines = File.ReadAllLines(dataPath);

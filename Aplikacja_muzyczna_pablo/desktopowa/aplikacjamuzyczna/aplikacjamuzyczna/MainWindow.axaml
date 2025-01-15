@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="350"
+        Width="1100"
+        Height="350"
+        x:Class="aplikacjamuzyczna.MainWindow"
+        Title="MojeDźwięki, Wykonał: 00000000000"
+        Background="#2E8B57"
+        Padding="20"
+        CanResize="False"
+        Loaded="Control_OnLoaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="PreviousButton" Grid.Column="0" Grid.Row="0" Click="PreviousButton_OnClick">
+            <Image Height="70" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz3.png"/>
+        </Button>
+        
+        <Button x:Name="NextButton" Grid.Column="3" Grid.Row="0" Click="NextButton_OnClick">
+            <Image Height="70" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz2.png"/>
+        </Button>
+        
+        <Image Grid.Column="1" Grid.Row="0" Source="C:\Users\pawel\Desktop\poprawaPablo\desktopowa\aplikacjamuzyczna\aplikacjamuzyczna\images\obraz.png" 
+               HorizontalAlignment="Left"
+               Margin="30, 0, 0, 0"/>
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center" Margin="30, 0, 0, 0">
+            <TextBlock x:Name="BandNameTextBlock" Text="Myscsc" FontSize="50" Foreground="White"/>
+            <TextBlock x:Name="TitleTextBlock" Text="Myscsc" FontSize="30" Foreground="White" FontStyle="Italic"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="SongsNumberTextBlock" Text="Myscsc" FontSize="20" Foreground="#61D918"/>
+                    <TextBlock Text="utworów" FontSize="20" Foreground="#61D918" Margin="5, 0, 0, 0"/>
+                </StackPanel>
+                
+                <TextBlock x:Name="YearTextBlock" Text="Myscsc" FontSize="20" Margin="40, 0, 0, 0" Foreground="#61D918"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="30, 0, 0, 0">
+            <TextBlock Text="0000" x:Name="DownloadsTextBlock" VerticalAlignment="Center" Foreground="#61D918"/>
+            <Button Content="Pobierz" FontWeight="Bold" Background="#61D918" Click="DownloadsButton_OnClick" Margin="30, 0, 0, 0" FontSize="20" CornerRadius="0"/>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

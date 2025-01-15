@@ -29,6 +29,7 @@ public partial class MainWindow : Window
         TitleTextBlock.Text = allTextLines[1 + (pageIndex * 6)];
         SongsNumberTextBlock.Text = allTextLines[2 + (pageIndex * 6)];
         YearTextBlock.Text = allTextLines[3 + (pageIndex * 6)];
+        DownloadsTextBlock.Text = allTextLines[4 + (pageIndex * 6)];
         
     }
 
@@ -46,6 +47,7 @@ public partial class MainWindow : Window
         TitleTextBlock.Text = allTextLines[1 + (pageIndex * 6)];
         SongsNumberTextBlock.Text = allTextLines[2 + (pageIndex * 6)];
         YearTextBlock.Text = allTextLines[3 + (pageIndex * 6)];
+        DownloadsTextBlock.Text = allTextLines[4 + (pageIndex * 6)];
     }
 
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
